@@ -1,0 +1,55 @@
+html, body {
+    margin: 0px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+#app {
+    float: left;  
+    width: 100%;
+    padding: 20px;
+}
+
+.keyboard {
+    position: relative; 
+    width: 440px; 
+    left: 50%; 
+    margin-left: -220px;
+}
+.keyboard .display {
+    float: left; width: 426px; padding: 2px;
+}
+.keyboard .display .input-display {
+    width: 100%; 
+    border: solid 1px #CDCDCD; 
+    border-radius: 5px; 
+    background-color: #FFFFFF; 
+    height: 50px; 
+    padding: 10px;
+    font-size: 25px;
+    text-align: right !important;
+}
+.keyboard .keyboard-control {
+    float: left; 
+    width: 140px; 
+    padding: 2px;
+}
+.keyboard .keyboard-control-all {
+    float: left; 
+    width: 284px; 
+    padding: 2px;
+}
+
+.keyboard .btn-keyboard {
+    background-color: #006DD9; 
+    width: 100%; 
+    border: 0px; 
+    height: 30px; 
+    font-size: 14px; 
+    color: #FFFFFF; 
+    border-radius: 5px;
+}
+.keyboard .btn-keyboard:hover {
+    background-color: #0057AE; 
+}
