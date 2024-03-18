@@ -1,8 +1,34 @@
 function clearCalculator() {
     document.getElementById("sentence_calculator").value = "";
+    document.getElementById("display_calculator").value = "";
 }
 
 function addParamCalculator(element) {
+    let display_calculator = document.getElementById("display_calculator").value;
+    console.log(display_calculator);
+    switch(element){
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            display_calculator+= element;
+            break;
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            display_calculator = "";
+            break;
+        case 'a/c':
+            display_calculator = "";
+            break;
+    }
+    document.getElementById("display_calculator").value = display_calculator;
     document.getElementById("sentence_calculator").value+= element;
 }
 
@@ -107,7 +133,7 @@ window.addEventListener('keypress', (e) => {
             addParamCalculator(key);
             break;
         case 48:
-            key = "/";
+            key = "0";
             addParamCalculator(key);
             break;
         case 49:
@@ -147,10 +173,11 @@ window.addEventListener('keypress', (e) => {
             addParamCalculator(key);
             break;  
         case 44:
-            key = ",";
+            key = ".";
             addParamCalculator(key);
             break;  
         case 13:
+        case 61:
             executeCalculator();
             break;  
     }
